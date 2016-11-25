@@ -1,0 +1,75 @@
+<header id="header" ng-controller="NavbarController as vm">
+    <div class="headerdetails">
+        <div class="container"> <a class="logo pull-left" ng-click="vm.goTo('home')"><img title="Classifieds" alt="Classifieds" src="img/logo.png"></a>
+            <div id="mainmenu"  class=" pull-right">
+                <!-- Navigation -->
+                <nav class="subnav">
+                    <div class="menurelative"> <a class="btn btn-orange mainmenumobile">Menu</a>
+                        <ul class="nav-pills mainmenucontain">
+                            <li> <a class="" ng-click="vm.goTo('home')">Home</a></li>
+
+                            <li> <a class="submenu2">Products</a>
+                                <div class="submenu">
+                                    <ul class="pull-left">
+                                        <li> <a class="" ng-click="vm.goTo('products-list')">Products</a> </li>
+                                        <li> <a class="" ng-click="vm.goTo('categories-list')">Categories</a> </li>
+                                        <li><a class="" href="#"><img title="" alt="" src="img/ad1.jpg" width="200"></a></li>
+                                    </ul>
+                                    <div id="topdeal">
+                                        <h3>Top Deal</h3>
+                                        <ul>
+                                            <li> <img width="100" src="img/blog1.jpg" alt="blog" title="blog" class="pull-left">
+                                                <a class="title" href="blog.html">Samsung Galaxy Tab 3 T211 Tablet </a>
+
+                                                <div class="blogdate"> <span class="blogicon"><i class="fa fa-calendar"></i> September 5, 2013 </span> </div>
+                                            </li>
+                                            <li> <img width="100" src="img/blog2.jpg" alt="blog" title="blog" class="pull-left">
+                                                <a class="title" href="blog.html">Samsung Galaxy Tab 3 T211 Tablet </a>
+
+                                                <div class="blogdate"> <span class="blogicon"><i class="fa fa-calendar"></i> September 5, 2013 </span> </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li> <a class="" ng-click="vm.goTo('search.list')">Detail Page</a> </li>
+                            <li ng-if="vm.isAuthenticated()"> <a class="submenu2">Blog</a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li> <a class="" ng-click="vm.goTo('orders-list')">Orders</a> </li>
+                                        <li> <a class="" ng-click="vm.goTo('shipping-list')">Shipping</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li> <a class="" href="contact.html">Contact</a> </li>
+                            <li> <a class="" href="features.html">Features</a> </li>
+                            <li> <a class="submenu2"><i class="fa fa-user"></i>
+                                <strong ng-if="!vm.isAuthenticated()">Account</strong>
+                                <strong ng-if="vm.isAuthenticated()">{{user.username}}</strong>
+                            </a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li ng-if="!vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('login')">Login</a> </li>
+                                        <li ng-if="!vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('signup')">Register</a> </li>
+                                       <!-- <li ng-if="vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('account')">Dashboard</a> </li>-->
+                                        <li ng-if="vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('settings.profile')">Settings</a> </li>
+                                       <!-- <li ng-if="vm.isAuthenticated()"> <a class="" href="post-ad.html">Post An Ad</a> </li>-->
+                                        <li ng-if="vm.isAuthenticated()"> <a class="" ng-click="vm.logout()"><i class="fa fa-sign-out"></i>Logout</a> </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+                <div class="mt10 pull-right">
+                    <div class="email"> <i class="fa fa-envelope-o"></i> Email : <a href="maito:support@indianfilmzone.com" class="black">support@indianfilmzone.com </a></div>
+                    <div class="call"><i class="fa fa-phone"></i> Call Us : <span class="black">+ 91 9967247394 </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

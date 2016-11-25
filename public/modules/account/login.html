@@ -1,0 +1,51 @@
+<div class="container">
+    <!--  breadcrumb -->
+    <ul class="breadcrumb">
+        <li> <a ng-click="vm.goTo('home')" >Home</a> </li>
+        <li class="active"> Login</li>
+    </ul>
+
+    <div class="mt40 row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5 class="heading5">Login</h5>
+            <div class="loginbox">
+                <form class="form-vertical" name="loginForm">
+                    <fieldset>
+                        <div class="control-group">
+                            <label  class="control-label">E-Mail Address:</label>
+                            <div class="controls">
+                                <input class="span3 form-control input-lg" type="text" name="email" ng-model="vm.user.email" placeholder="Email" required autofocus>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label  class="control-label">Password:</label>
+                            <div class="controls">
+                                <input class="span3 form-control input-lg" type="password" name="password" ng-model="vm.user.password" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <a class="orange" ng-click="vm.goTo('forgot')">Forgotten Password</a> <br>
+                        <br>
+                        <a class="btn btn-orange" ng-disabled="vm.loginForm.$invalid" ng-click="vm.login()">Login</a>
+                        <a class="btn btn-orange" ng-click="vm.authenticate('facebook')"><i class="ion-social-facebook"></i> Sign in with Facebook</a>
+                        <a class="btn btn-orange" ><span class="ion-social-googleplus"></span>Sign in with Google</a>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="loginbox">
+                <h5 class="heading5"> Register Account</h5>
+                <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+                <ul class="whyus">
+                    <li><i class="fa  fa-magic"></i> <span class="direname">Easy to Understand</span> </li>
+                    <li><i class="fa fa-arrow-right"></i> <span class="direname">Fast to Navigate</span> </li>
+                    <li><i class="fa fa-th"></i> <span class="direname">Lot of Options</span> </li>
+                    <li><i class="fa fa-search"></i><span class="direname">Quick Search</span> </li>
+                </ul>
+                <br>
+                <br>
+                <a  class="btn btn-orange" ng-click="vm.goTo('signup')">Continue</a> </div>
+        </div>
+    </div>
+</div>

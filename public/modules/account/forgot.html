@@ -1,0 +1,40 @@
+<div class="container">
+    <!--  breadcrumb -->
+    <ul class="breadcrumb">
+        <li> <a ng-click="vm.goTo('home')" >Home</a> </li>
+        <li class="active"> Forgot Password</li>
+    </ul>
+
+    <div class="mt40 row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5 class="heading5">Forgot Password</h5>
+            <div class="loginbox">
+                <form class="form-vertical" name="loginForm">
+                    <fieldset>
+                        <div class="control-group">
+                            <label  class="control-label">E-Mail Address:</label>
+                            <div class="controls">
+                                <input class="span3 form-control input-lg" type="text" name="email" ng-model="vm.user.email" placeholder="Email" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label  class="control-label">Or</label>
+                        </div>
+
+                        <div class="control-group">
+                            <label  class="control-label">Mobile:</label>
+                            <div class="controls">
+                                <input class="span3 form-control input-lg" type="text" name="password" ng-model="vm.user.mobile" placeholder="Mobile" required>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-orange" ng-disabled="vm.loginForm.$invalid" ng-click="vm.login()">Reset Password</a>
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

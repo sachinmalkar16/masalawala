@@ -1,0 +1,26 @@
+<footer id="footer"  ng-controller="NavbarController as vm">
+    <section id="quicklink">
+        <div class="container">
+            <div class="row">
+                <ul class="quicklinks">
+                    <li> <a class="active home" ng-click="vm.goTo('home')">Home</a> </li>
+                    <li> <a class="" ng-click="vm.goTo('home')">Products</a> </li>
+                    <li ng-if="vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('home')">Detail Page</a> </li>
+                    <li ng-if="!vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('home')">Login</a> </li>
+                    <li ng-if="!vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('home')">Register</a> </li>
+                    <li ng-if="vm.isAuthenticated()"> <a class="" ng-click="vm.goTo('home')">My Account</a> </li>
+                    <li> <a class="" ng-click="vm.goTo('home')">Contact</a> </li>
+                    <li> <a class="" ng-click="vm.goTo('home')">Features</a> </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="copyrightbottom">
+        <div class="container">
+            <div class="row">
+                <div class="pull-left"> Copyright © 2014. Classic. All rights reserved </div>
+                <div class="pull-right"> Developed by Sachin</div>
+            </div>
+        </div>
+    </section>
+</footer>

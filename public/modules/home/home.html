@@ -1,0 +1,48 @@
+<section id="search">
+
+    <div class="container">
+        <div class="searchcontianer"><a class="todayoffer"><span class="text1">Today's Offer</span><span class="text2">50% OFF</span></a>
+            <h1 class="heading1">Hand pick organic spices all around india at <span class="orange">Masalawala.com </span>
+            </h1>
+            <form name="searchForm" class="form-inline">
+                <div class="btn-group">
+                    <input type="search" placeholder="Search Here" class="form-control mainserarch" ng-model="vm.keyword">
+                    <button data-toggle="dropdown" class="btn  dropdown-toggle category" type="button"> Select
+                        Categories <span class="caret"></span></button>
+                    <ul class="dropdown-menu categorydropdown" ng-repeat="category in vm.categories">
+                        <li id="{{category.id}}"><a href="#">{{category.product_category}}</a></li>
+                    </ul>
+                    <input type="submit" ng-click="vm.search()" value="Search" class="btn btn-orange tooltip-test mainserarchsubmit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="post-ad.html" class="postad"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a></section>
+<!-- Premium Listing-->
+<div class="container mt40">
+    <h2 class="heading3">Premium Listing</h2>
+    <div class="row mt40">
+        <div class="column3 premiumlisting">
+            <ul id="premiumlisting">
+                <li><a href="listing.html" class="listing"> <img src="img/list1.jpg" alt=""> <span class="caption">Computer Listing</span>
+                    <div>50%offer</div>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list2.jpg" alt=""> <span class="caption">For Rent</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list3.jpg" alt=""> <span class="caption">For Pets</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list4.jpg" alt=""> <span class="caption">Mobiles</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list5.jpg" alt=""> <span class="caption">Camera Listing</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list6.jpg" alt=""> <span class="caption">Music Listing</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list3.jpg" alt=""> <span class="caption">Premium Listing</span>
+                </a></li>
+                <li><a href="listing.html" class="listing"> <img src="img/list4.jpg" alt=""> <span class="caption">Premium Listing</span>
+                </a></li>
+            </ul>
+            <div class="clearfix"></div>
+            <a id="prevpre" class="prepre" href="#">Previous</a> <a id="nextpre" class="nextpre" href="#">Next</a></div>
+    </div>
+</div>

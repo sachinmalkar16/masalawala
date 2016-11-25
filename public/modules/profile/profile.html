@@ -1,0 +1,63 @@
+<div class="alert alert-danger" ng-if="user.error">
+    <strong>There was an error: </strong> {{user.error.error}}
+    <br>Please go back and login again
+</div>
+<div class="">
+    <h2 class="heading5"><span class="maintext">My Profile</span></h2>
+    <form class="form-horizontal mt20">
+        <fieldset>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Display Name:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" ng-model="vm.user.username" placeholder="Display Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Company Name:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="vm.user.first_name" placeholder="First Name">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="vm.user.last_name" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" ng-model="vm.user.email" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mobile:</label>
+                <div class="col-sm-6">
+                    <input type="tel" class="form-control" ng-model="vm.user.mobile" placeholder="Mobile">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Date of Birth</label>
+                <div class="col-sm-6">
+                    <input type="date" date='dd-MM-yyyy'  class="form-control" ng-model="vm.user.birthday" placeholder="Birdthday">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Gender</label>
+                <div class="col-sm-6">
+                    <div class="btn-group " data-toggle="buttons">
+                        <label class="btn btn-default {{vm.user.gender=='M'  ? 'active' : '' }}"  >
+                            <input type="radio" ng-click="vm.genderChange('M')" name="gender" value="M" /> Male
+                        </label>
+                        <label class="btn btn-default {{vm.user.gender =='F'  ? 'active' : '' }}">
+                            <input type="radio" ng-click="vm.genderChange('F')" name="gender" value="F" /> Female
+                        </label>
+                        <label class="btn btn-default {{  vm.user.gender =='O'  ? 'active' : '' }}">
+                            <input type="radio" ng-click="vm.genderChange('O')" name="gender" value="O" /> Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10 mt20">
+                <input type="submit" class="btn btn-orange" value="Update" ng-click="vm.updateProfile()">
+            </div>
+        </fieldset>
+    </form>
+</div>

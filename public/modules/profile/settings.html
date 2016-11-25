@@ -1,0 +1,77 @@
+<!--<div class="col-sm-6 col-sm-offset-3">
+    <div class="well">
+        <h3>Users</h3>
+        <button class="btn btn-primary" style="margin-bottom: 10px" ng-click="user.getUsers()">Get Users!</button>
+        <ul class="list-group" ng-if="user.users">
+            <li class="list-group-item" ng-repeat="user in user.users">
+                <h4>{{user.name}}</h4>
+                <h5>{{user.email}}</h5>
+            </li>
+        </ul>
+        <div class="alert alert-danger" ng-if="user.error">
+            <strong>There was an error: </strong> {{user.error.error}}
+            <br>Please go back and login again
+        </div>
+    </div>
+</div>-->
+
+<!--
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Profile</div>
+        <div class="panel-body">
+            <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
+            <form method="post">
+                <div class="form-group">
+                    <label class="control-label">Profile Picture</label>
+                    <img class="profile-picture" ng-src="{{vm.user.profile_image || 'https://placehold.it/100x100'}}">
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="ion-at"></i> Email Address</label>
+                    <input type="email" class="form-control" ng-model="user.email" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="ion-person"></i> Display Name</label>
+                    <input type="text" class="form-control" ng-model="user.username" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="ion-at"></i> Name</label>
+                    <input type="text" class="form-control" ng-model="user.first_name" />
+                    <input type="text" class="form-control" ng-model="user.last_name" />
+                </div>
+
+
+                <button class="btn btn-lg btn-success" ng-click="vm.updateProfile()">Update Information</button>
+            </form>
+        </div>
+    </div>
+</div>-->
+
+
+    <div class="container">
+        <!--  breadcrumb -->
+        <ul class="breadcrumb">
+            <li> <a >My Account</a> </li>
+            <li class="active">Create Profile</li>
+        </ul>
+        <a href="post-ad.html" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+        <div class="row mt40">
+            <!--  Sideabar -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                <!--My Account-->
+                <div class="sidemodule">
+                    <h2 class="heading5"><span class="maintext"> My Account</span></h2>
+                    <ul class="nav nav-list categories">
+                        <li> <a ng-click="vm.goTo('settings.profile')">Profile</a> </li>
+                        <li> <a ng-click="vm.goTo('settings.profile')">Address </a></li>
+                        <li> <a ng-click="vm.goTo('settings.profile')">Post An Ad</a> </li>
+                    </ul>
+                </div>
+            </aside>
+            <!--  Container -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column" ui-view>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,222 @@
+<!-- Search Start-->
+<section id="searchinner">
+    <div class="container">
+        <div class="searchcontianer">
+            <form class="form-inline">
+                <div class="btn-group">
+                    <input type="search" placeholder="Search Here" class="form-control mainserarch">
+                    <button data-toggle="dropdown" class="btn  dropdown-toggle category" type="button"> Select Categories <span class="caret"></span> </button>
+                    <ul class="dropdown-menu categorydropdown">
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Item For Sale</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Personal</a></li>
+                    </ul>
+                    <input type="submit" value="Search" class="btn btn-orange tooltip-test mainserarchsubmit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <a class="postad" href="post-ad.html"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a> </section>
+<div class="container">
+    <!--  breadcrumb -->
+    <ul class="breadcrumb">
+        <li> <a >Products</a> </li>
+        <li class="active">Listing</li>
+    </ul>
+    <div class="row mt40">
+        <!--  Sideabar -->
+        <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+            <!--Filter-->
+            <div class="filter sidemodule">
+                <h2 class="heading5"><span class="maintext">Filter Search</span></h2>
+                <h5 class="subheading">Price</h5>
+                <ul class="checkprice">
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Rs. 999 and Below (0) </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Rs. 1000 - Rs. 1999 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Rs. 2000 - Rs. 3999 </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Rs. 3000 - Rs. 5000 </label>
+                        </div>
+                    </li>
+                </ul>
+                <h5 class="subheading">brand</h5>
+                <input type="search" class="form-control brandsearch" placeholder="Search Brand">
+                <ul class="searchbrand">
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Sony </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Samsung </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Nokia </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                HTC </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">
+                                Micromax </label>
+                        </div>
+                    </li>
+                </ul>
+                <h5 class="subheading">Search Only</h5>
+                <ul class="searcholy">
+                    <li>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" value="option1" id="option1">
+                                Rs. 2000 and Below (0) </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" value="option2" id="option2">
+                                Rs. 2000 and Below (0) </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" value="option3" id="option3">
+                                Rs. 2000 and Below (0) </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Location-->
+            <div class="sidemodule">
+                <h2 class="heading5"><span class="maintext"> Location</span></h2>
+                <ul class="nav nav-list categories">
+                    <li> <a href="#">Paris, Hong Kongs</a> </li>
+                    <li> <a href="#">Washington D.C. </a></li>
+                    <li> <a href="#">Bangkok</a> </li>
+                    <li> <a href="#">Singapore </a></li>
+                    <li> <a href="#">New York</a> </li>
+                    <li> <a href="#">Kuala Lumpur </a></li>
+                </ul>
+            </div>
+
+            <!--Caegogries-->
+            <div class="sidemodule">
+                <h2 class="heading5"><span class="maintext"> Refine Category</span></h2>
+                <ul class="nav nav-list categories">
+                    <li> <a href="#">Real Estate </a></li>
+                    <li> <a href="#">Services </a></li>
+                    <li> <a href="#">Electronics </a>
+                        <ul class="nav nav-list">
+                            <li> <a href="#">Mobiles & Tablets </a>
+                                <ul class="nav nav-list">
+                                    <li class="active"> <a href="#">Mobile Phones </a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!--  Container -->
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mt40column" ui-view>
+        </div>
+    </div>
+</div>
+<!-- Social-->
+<div class="container mt20">
+    <h2 class="heading3">Social</h2>
+    <div class="mt40" id="social" >
+        <ul class="row clearfix">
+            <li class="col-md-3 col-sm-6">
+                <h5 class="heading5">Twitter</h5>
+                <div id="twitter"> </div>
+            </li>
+            <li class="col-md-3 col-sm-6 mt40column">
+                <h5 class="heading5">Flickr</h5>
+                <div class="social-feed flickr-feed"> </div>
+            </li>
+            <li class="col-md-3 col-sm-6 mt40column">
+                <h5 class="heading5">Youtube</h5>
+                <div class="social-feed youtube-feed"> </div>
+            </li>
+            <li class="col-md-3 col-sm-6 mt40column">
+                <h5 class="heading5">Facebook</h5>
+                <div class="">
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/facebook" data-width="240" data-show-faces="true" data-colorscheme="light" data-stream="false" data-show-border="false" data-header="false"  data-height="240"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Newsletter-->
+<section class="mt40 newsletter" id="newslettersignup">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="pull-left ">
+                    <h5 class="heading5 borderbottm"> Newsletters Signup</h5>
+                    Sign up to Our Newsletter &amp; get attractive Offers by subscribing to our newsletters. </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="pull-right mt20 surbscribeform">
+                    <form class="form-inline">
+                        <div class="input-prepend">
+                            <input type="text" class="subscribeinput" id="inputIcon" placeholder="Subscribe to Newsletter">
+                            <input type="submit" class="btn btn-orange" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

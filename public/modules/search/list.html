@@ -1,0 +1,48 @@
+<!--Sorting-->
+<div class="sorting well">
+    <form class=" form-inline pull-left">
+        Sort By :
+        <select class="span2" name="sortBy" ng-model="vm.sortBy"
+                ng-options="type.value as type.display for type in vm.sortByType" >
+        </select>
+
+        &nbsp;&nbsp;
+        <select ng-model="vm.pageSize" ng-options="val for (key , val) in vm.page" class="span1">
+        </select>
+    </form>
+    <div class="btn-group pull-right">
+        <button class="btn btn-orange" id="list"><i class="fa fa-th-list fa-white"></i> </button>
+        <button class="btn " ng-click="vm.goTo('search.grid')" id="grid"><i class="fa fa-th fa "></i></button>
+
+    </div>
+</div>
+<!-- Listing-->
+<div class="mt40" id="serchlist">
+    <div class="searchresult list" >
+        <ul dir-paginate="product in vm.products | itemsPerPage: vm.pageSize | orderBy:vm.sortBy" ui-sref="search.detail({ pId: product.id })">
+            <li class="clearfix">
+                <div class="col-sm-2"> <a class="thumbnail" ui-sref="search.detail({ pId: product.id })"><img ng-src="{{vm.url}}/{{photo.product_id}}/{{product.photos[0].image}}" alt=""></a>
+
+                </div>
+                <div class="col-sm-8">
+                    <h3><a class="title" ui-sref="search.detail({ pId: product.id })">{{product.product_name}}</a></h3>
+                    <ul class="icondetail">
+                        <li><i class="fa fa-th-list"></i> Category : <a href="#">{{product.category.product_category}}</a></li>
+                        <li><i class="fa fa-map-marker"></i> Location : California, U.S.</li>
+                        <li><i class="fa fa-calendar"></i> Posted On : Mach 22, 2014 </li>
+                        <li><i class="fa fa-user"></i> Posted by : <a href="#">pxcreate</a></li>
+                    </ul>
+                    <div class="discrption"> {{product.description}}</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="share"> Share On : <br>
+                        <a data-original-title="Facebook" class="tooltip-test"><i class="fa fa-facebook"></i></a>
+                        <a data-original-title="Twitter" class="tooltip-test"><i class="fa fa-twitter"></i></a>
+                        <a data-original-title="Google Plus" class="tooltip-test"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <a class="btn  contact"><i class="fa fa-shopping-cart"></i> Add to Cart</a> </div>
+            </li>
+        </ul>
+        <dir-pagination-controls></dir-pagination-controls>
+    </div>
+</div>
